@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+.main {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-image: url('https://source.unsplash.com/1600x900/?clock,watch');
+}   
+
+.title {
+    margin-top: 20px;
+    color:aliceblue;
+    text-align: center;
+    font-size: 2.5rem;
+    flex-direction: column;
+}
+

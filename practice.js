@@ -145,15 +145,91 @@ var students = [
 ];
 console.log(findtopper(students));
 */
-const topper = function(marks){
-    return marks.filter(function(mark){
-        return student.marks > 85;
-    });
+
+/* This function filters students who have marks greater than 80.
+function filterTopStudents(students) {
+  return students.filter(function(student) {
+    return student.marks > 80;
+  });
 }
-var student = [
+var students = [
+  { name: "John", marks: 85 },
+  { name: "Jane", marks: 90 },
+  { name: "Doe", marks: 78 }
+];
+console.log(filterTopStudents(students));
+*/
+
+/* This function calculates the total marks of all students in an array.
+
+const totalmarks = function(students){
+    var total = 0;
+    for(let i=0; i<students.length; i++){
+        total += students[i].marks;
+    }
+    return total;
+} 
+var students = [
     {name: "John", marks: 85},
     {name: "Jane", marks: 90},
     {name: "Doe", marks: 78}
 ];
+console.log(totalmarks(students));
+*/
 
-console.log(topper(student));
+// This code demonstrates array and object destructuring in JavaScript.
+/*
+const number = [1, 2, 3, 4, 5];
+
+const [a,b,c,d,e] = number;
+console.log(a); // 1
+console.log(b); // 2
+console.log(c); // 3
+/*
+
+/*This code demonstrates object destructuring in JavaScript.
+
+const student ={
+    name: "John",
+    age: 20,
+    grade: "A"
+}
+
+const {name,age,grade} = student;
+console.log(name); // John
+console.log(age); // 20
+console.log(grade); // A
+*/
+
+/* 
+class employees{
+    constructor(name,age,salary){
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+    }
+
+displayEmployeeInfo(emp) {
+    console.log(`Name: ${emp.name},
+                 Age: ${emp.age},
+                 Salary: ${emp.salary}`);
+}
+}
+
+const emp1 = new employees("John", 30, 50000);
+const emp2 = new employees("Jane", 25, 60000);
+emp1.displayEmployeeInfo(emp1);
+emp2.displayEmployeeInfo(emp2);
+*/
+
+const mypromise = new Promise((resolve, reject) => {
+    const success = true; // Simulate success or failure
+    if (success) {
+        resolve("Promise resolved successfully!");
+    } else {
+        reject("Promise rejected.");
+    }
+});
+mypromise.then(function(data){
+    console.log(data); // Output: Promise resolved successfully!
+})
