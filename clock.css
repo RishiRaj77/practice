@@ -1,28 +1,63 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+
+/* other css file imports */
+@import url("sections/header.css");
+@import url("sections/hero.css");
+@import url("sections/about.css");
+@import url("sections/popular.css");
+@import url("sections/trending.css");
+@import url("sections/subscribe.css");
+@import url("sections/footer.css");
+
+/* CSS variables for reusablity across all files (including above imported) */
+:root {
+  --playfair-display: "Playfair Display", serif;
+  --plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
+
+  --primary-color: #b1454a;
+  --secondary-color: #121212;
+
+  --black-200: #020202;
+  --black-300: #333333;
+  --black-400: #1f1e31;
+  --black-500: #555555;
+  --gray-100: #888888;
+
+  --color-white: #fff;
+  --color-creamson: #fff0de;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 body {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: var(--color-creamson);
+}
+.header_nav{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #282c34;
+    overflow: hidden;
 }
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-.main {
+.header_logo{
+    flex: 1;
+    display: flex;
+    position: relative;
+    padding: 20px;
+}
+.header_logo-overlay{
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-image: url('https://source.unsplash.com/1600x900/?clock,watch');
-}   
-
-.title {
-    margin-top: 20px;
-    color:aliceblue;
-    text-align: center;
-    font-size: 2.5rem;
-    flex-direction: column;
+    background-color: var(--primary-color);
+    z-index: 1;
 }
+.header_logo h4{
+    padding-left: 30px ;
+    color: var(--color-white);
 
+}

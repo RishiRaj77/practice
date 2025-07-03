@@ -222,6 +222,7 @@ emp1.displayEmployeeInfo(emp1);
 emp2.displayEmployeeInfo(emp2);
 */
 
+/*// This code demonstrates the use of promises in JavaScript.
 const mypromise = new Promise((resolve, reject) => {
     const success = true; // Simulate success or failure
     if (success) {
@@ -233,3 +234,94 @@ const mypromise = new Promise((resolve, reject) => {
 mypromise.then(function(data){
     console.log(data); // Output: Promise resolved successfully!
 })
+*/
+
+/*// This code demonstrates the use of async/await to fetch data from an API.
+async function fetchPost() {
+    try{
+        console.log("fetching data...");
+        const response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+        const data = await response.json();
+        console.log(data);
+    }catch(error){
+        console.error("Error fetching data:", error);
+    }
+    
+}
+fetchPost();
+*/
+
+/*
+function getdata(dataID,getnextdata){
+    setTimeout(()=>{
+        console.log("data",dataID);
+        if(getnextdata){
+            getnextdata();
+        }
+    },2000);
+}
+getdata(1 ,()=>{
+    console.log("Data 1 fetched successfully!");
+    getdata(2,()=>{
+        console.log("Data 2 fetched successfully!");
+        getdata(3, ()=>{
+            console.log("Data 3 fetched successfully!");
+            getdata(4,()=>{
+                console.log("Data 4 fetched successfully!");
+                getdata(5,()=>{
+                    console.log("All data fetched successfully!");
+                });
+            });
+        })
+    });
+});
+*/
+/*
+function getdata(dataID,getnextdata){
+    return new promise((resolve,reject)=>{
+        setTimeout(()=>{
+        console.log("data",dataID);
+        resolve("success");
+        if(getnextdata){
+            getnextdata();
+        }
+    },5000);
+
+    });
+}
+getdata(1,()=>{
+    getdata(2);
+});
+*/
+/*
+const getPromise = ()=>{
+    return new Promise((resolve, reject) => {
+    console.log("Promise is pending...");
+    resolve("Promise is resolved successfully!");
+    
+});
+}
+
+let promise = getPromise();
+promise.then((resolve)=>{
+    console.log(resolve);
+});
+
+promise.catch((error)=>{
+    console.log("error", error);
+});
+*/
+
+function asyncFunction() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Async function resolved!");
+        }, 2000);
+    });
+}
+console.log("fetching data 1...");
+let promise = asyncFunction();
+promise.then((resolve)=>{
+    console.log(resolve); // Output: Async function resolved!
+})
+
