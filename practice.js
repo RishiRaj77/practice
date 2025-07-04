@@ -312,16 +312,123 @@ promise.catch((error)=>{
 });
 */
 
-function asyncFunction() {
+/*
+function getdata(dataID) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve("Async function resolved!");
+            console.log("data", dataID);
+            resolve("Data fetched successfully!");
+           
         }, 2000);
     });
 }
-console.log("fetching data 1...");
-let promise = asyncFunction();
-promise.then((resolve)=>{
-    console.log(resolve); // Output: Async function resolved!
+
+//promise chaining
+
+getdata(1)
+    .then((resolve)=>{
+        return getdata(2);
+    })
+    .then((resolve)=>{
+        return getdata(3);
+    })
+    .then((resolve)=>{
+        console.log("All data fetched successfully!");
+    });
+*/
+
+
+/*
+function getdata(dataID) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("data", dataID);
+            resolve("Data fetched successfully!");
+           
+        }, 2000);
+    });
+}
+
+async function getAllData(){
+
+    await getdata(1);
+    await getdata(2);
+    await getdata(3);
+    console.log("All data fetched successfully!");
+}
+*/
+
+function getdata(dataid,getnextdata){
+    return new Promise((res,rej)=>{
+        setTimeout(() => {
+            console.log("data",dataid);
+            res("Data 1 fetched successfully!");
+            if(getnextdata){
+                getnextdata();
+            }
+            
+        }, 4000);
+    })
+}
+/*
+getdata(1)
+    .then((res)=>{
+        return getdata(2);
+    })
+    .then((res)=>{
+        return getdata(3);
+    })
+    .then((res)=>{
+        console.log("promise chain ended !");
+         console.log("asyn-await chain start !");
+
+    });
+    */
+
+async function getAllData(){
+    try {
+        await getdata(1);
+        await getdata(2);
+        await getdata(3);
+        console.log("All data fetched successfully!");
+        
+    } catch (error) {
+        console.error("Error fetching data:", error);
+        
+    }
+    
+}
+getAllData()
+/*
+getdata(1,()=>{
+    getdata(2,()=>{
+        getdata(3,()=>{
+            console.log("All data fetched successfully!");
+        })
+    })
 })
+ */
+
+/* This function greets a user with a default name if no name is provided.
+function greet(name="guest"){
+    console.log(`Hello, ${name}!`);
+}
+greet(); // Output: Hello, guest!
+greet("Alice"); // Output: Hello, Alice!
+
+*/ 
+// This function greets a user and lists their hobbies, with a default name and variable number of hobbies.
+/*
+function greet(name="",...hobbies){
+    console.log(`Hello, ${name}!`);
+    console.log("Your hobbies are:");
+    for(let i=0; i<hobbies.length; i++){
+        console.log(`- ${hobbies[i]}`);
+    }
+  
+}
+greet("Rishi", "football", "traveling", "backchodi karna","gym bhi hai mittar");
+*/
+
+
 
