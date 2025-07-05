@@ -357,7 +357,7 @@ async function getAllData(){
     console.log("All data fetched successfully!");
 }
 */
-
+/*
 function getdata(dataid,getnextdata){
     return new Promise((res,rej)=>{
         setTimeout(() => {
@@ -384,7 +384,7 @@ getdata(1)
 
     });
     */
-
+/*
 async function getAllData(){
     try {
         await getdata(1);
