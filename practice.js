@@ -429,6 +429,196 @@ function greet(name="",...hobbies){
 }
 greet("Rishi", "football", "traveling", "backchodi karna","gym bhi hai mittar");
 */
+// This code demonstrates error handling in JavaScript using try-catch blocks.
+/*
+function funA(){
+    throw new Error("This is an error from function A");
+}
+function funB(){
+        funA();
+    
+}
+function funC(){
+    try {
+        funB();
+    } catch (error) {
+        console.error("Error caught in function C:", error.message);
+    }
+}
+funC(); // This will catch the error thrown by funA and log it to the console.
+*/
 
+/*
+function fetchdata(){
+    console.log("Fetching data...");
 
+    try {
+        throw new Error("ma chud gai bhai code wapas deakh");
+        
+    } catch (error) {
+        console.error("Error occurred while fetching data:", error.message);
+        
+    } finally{
+        console.log("Data fetch attempt completed.");
+    }
+}
+fetchdata(); // This will log the error message and the final message.
+*/
 
+/*
+class usernotfoundError extends Error{
+    constructor(message){
+        super(message);
+        this.name = "UserNotFoundError"; 
+    }
+
+}
+
+const user = ["Rishi", "Butter", "Aniket","Akshay", "Sahil","Pravin"];
+
+function login(username){
+    if(!user.includes(username)){
+        throw new usernotfoundError(`User ${username} not found!`);
+    }
+}
+
+try {
+    login("Rishi");
+    console.log("Login successful!");
+    
+} catch (error) {
+    if (error instanceof usernotfoundError) {
+        console.error(error.message); // Output: User Rishi not found!
+    } else {
+        console.error("An unexpected error occurred:", error);
+    }
+    
+}
+*/
+/*
+const productname =[ "Mobile", "Laptop", "Tablet", "Smartwatch", "Headphones"];
+
+const [a, b, c, d, e] = productname;
+
+console.log(a); // Output: Mobile
+console.log(b); // Output: Laptop
+console.log(c); // Output: Tablet
+*/
+/*
+const pro = {
+    name: "Mobile",
+    price: 20000,
+    brand: "Samsung",
+    inStock: true,
+    specs : {
+        color: "Black", 
+        storage: "128GB",
+        ram: "8GB"
+    }
+}
+
+const {name, price, brand, inStock, specs: {color, storage, ram}} = pro;
+
+console.log(name); // Output: Mobile
+console.log(price); // Output: 20000
+*/
+
+/*
+class product{
+    constructor(name,price,brand){
+        this.name = name;
+        this.price = price;
+        this.brand = brand;
+    }
+
+    dispalyProductInfo() {
+        console.log(this.name, this.price, this.brand);
+    }
+        
+}
+
+const product1 = new product("Mobile", 20000, "Samsung");
+product1.dispalyProductInfo(); // Output: Mobile 20000 Samsung
+
+*/
+
+/*
+function fetchproductsdata(productid){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            const products = {
+                1: { name: "Mobile", price: 20000 , available: "yes"},
+                2:  {name: "Laptop", price: 50000 , available: "yes"},
+                3:  {name: "Tablet", price: 15000 , available: "no"},
+            };
+            const product = products[productid];
+            if (product) {
+                console.log("Product fetched successfully!");
+                resolve(product);
+                
+            } else {
+                reject(new Error("Product not found!"));
+                
+            }
+
+        } , 2000);
+
+    })
+
+}
+fetchproductsdata(1)
+    .then((product)=>{
+        console.log("Product Name:", product.name);
+        console.log("Product Price:", product.price);
+        console.log("Product Availability:", product.available);
+    })
+    .catch((error)=>{
+        console.error("Error fetching product:", error.message);
+    });
+
+*/
+
+// Simulate fetching order history from a server
+function fetchOrderHistory(customerId) {
+  return new Promise((resolve, reject) => {
+    console.log("📡 Fetching order history...");
+
+    setTimeout(() => {
+      const orderDatabase = {
+        1: [
+          { orderId: "ORD001", item: "Laptop", amount: 55000 },
+          { orderId: "ORD002", item: "Mouse", amount: 799 },
+        ],
+        2: [
+          { orderId: "ORD003", item: "Smartphone", amount: 14999 },
+        ],
+      };
+
+      const orders = orderDatabase[customerId];
+
+      if (orders) {
+        resolve(orders);
+      } else {
+        reject(new Error("❌ No order history found for this customer."));
+      }
+    }, 2000); // simulate 2 sec delay
+  });
+}
+
+// Async function to get and display order history
+async function displayOrderHistory(customerId) {
+  try {
+    const orders = await fetchOrderHistory(customerId); // wait for the promise
+    console.log(`📦 Order history for Customer ID ${customerId}:`);
+    orders.forEach((order) => {
+      console.log(`🧾 ${order.orderId} - ${order.item} - ₹${order.amount}`);
+    });
+  } catch (error) {
+    console.error(error.message);
+  } finally {
+    console.log("🔁 Order fetch complete.");
+  }
+}
+
+// Call the async function
+displayOrderHistory(1);
