@@ -14,7 +14,8 @@ html,body{
 }
 
 #loader{
-    position: relative;
+    display: none;
+    position: absolute;
     width: 100%;
     height: 100vh;
     background-color: #111;
@@ -60,6 +61,8 @@ html,body{
 
 
 #yellow{
+    display: none;
+    
     width: 100%;
     top: 100%;
     position: absolute;
@@ -67,3 +70,135 @@ html,body{
     background-color: #fad707;
 
 }
+
+#home {
+    width: 100%;
+    height: 100vh;
+    background-color: #333333;
+}
+#home #nav{
+    width: 100%;
+    height: 100px;
+    justify-content: space-between;
+    padding: 0 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+#home #nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 800;
+    color: black;
+    position: relative; /* Needed for ::after positioning */
+}
+
+#home #nav a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fad707;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: width 0.3s;
+}
+
+#home #nav a:hover {
+    color: black;
+}
+
+#home #nav a:hover::after {
+    width: 100%;
+}
+
+.upper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.upper h1{
+    
+    padding-right: 45vw;
+    padding-top: 25vh;
+    font-size: 8vw;
+    font-weight: 600;
+}
+.lower{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.lower h1{
+    padding-left: 40vh;
+    font-size: 8vw;
+    font-weight: 600;
+}
+
+#moving-div {
+     margin-top: 10vh;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    padding: 1.2vw;
+    overflow: hidden;
+    width: 44%;
+    display: flex;
+    justify-content: center;
+   
+
+}
+
+#moving-div .move {
+    display: inline-block;
+    animation-name: mobe;
+    animation-duration: 9s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#moving-div .move img {
+    height: 1vw;
+    margin: 0 1.2vw;
+}
+
+@keyframes mobe {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+
+}
+
+#blur-left {
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(to right, #dadada, transparent);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#blur-right {
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(to right, transparent, #dadada);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+
+

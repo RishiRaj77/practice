@@ -20,9 +20,8 @@ function revelToSpan(){
 
 })
 }
-revelToSpan();
-
-var tl = gsap.timeline();
+function loaderAnnimation(){
+    var tl = gsap.timeline();
 
 tl
 .from(".child span", {
@@ -55,3 +54,8 @@ tl
     duration: 0.5,
     ease: Circ.easeInOut,
 });
+
+}
+revelToSpan();
+loaderAnnimation();
+
