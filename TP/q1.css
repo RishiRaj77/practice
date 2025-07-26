@@ -1,0 +1,265 @@
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    height: 250px;
+    width: 100%;
+    background-color: blue;
+    justify-content: space-around;
+    flex-direction: row;
+    
+}
+.item1{
+    margin-top: 20px;
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+}
+
+.item2{
+    margin-top: 20px;
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+}
+.item3{
+    margin-top: 20px;
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+}
+
+.flex-container1{
+    display: flex;
+    justify-content: center;
+    height: 750px;
+    width: 100%;
+    background-color: blue;
+    justify-content: space-around;
+    flex-direction: column;
+    
+}
+.item1{
+    margin-top: 20px;
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+}
+
+.item2{
+    margin-top: 20px;
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+}
+.item3{
+    margin-top: 20px;
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+}
+.flex-container2{
+    display: flex;
+    justify-content: center;
+    height: 250px;
+    width: 100%;
+    background-color: blue;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    
+}
+.item1{
+    margin-top: 20px;
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+}
+
+.item2{
+    margin-top: 20px;
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+}
+.item3{
+    margin-top: 20px;
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+}
+.flex-container3{
+    display: flex;
+    justify-content: center;
+    height: 750px;
+    width: 100%;
+    background-color: blue;
+    justify-content: space-around;
+    flex-direction: column-reverse;
+    
+}
+.item1{
+    margin-top: 20px;
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+}
+
+.item2{
+    margin-top: 20px;
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+}
+.item3{
+    margin-top: 20px;
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+}
+
+.flex-container4{
+    display: flex;
+    justify-content: center;
+    height: 250px;
+    width: 100%;
+    background-color: blue;
+    justify-content: center;
+    flex-direction: row;
+    
+}
+
+.flex-container5{
+    display: flex;
+    justify-content: center;
+    height: 250px;
+    width: 100%;
+    background-color: blue;
+    justify-content: space-around;
+    flex-direction: row;
+    
+}
+
+.flex-container6{
+    display: flex;
+    justify-content: center;
+    height: 250px;
+    width: 100%;
+    background-color: blue;
+    justify-content: flex-start;
+    flex-direction: row;
+    
+}
+
+.flex-container7{
+    display: flex;
+    justify-content: center;
+    height: 250px;
+    width: 100%;
+    background-color: blue;
+    justify-content: flex-end;
+    flex-direction: row;
+    
+}
+
+.flex-container8{
+    display: flex;
+    justify-content: center;
+    height: 250px;
+    width: 100%;
+    background-color: blue;
+    justify-content: space-between;
+    flex-direction: row;
+    
+}
+
+.flex-container9{
+    display: flex;
+    
+    height: 250px;
+    width: 100%;
+    background-color: blue;
+    justify-content: space-around;
+    flex-direction: row;
+    
+}
+
+
+.flex-container10{
+    display: flex;
+   
+    height: 600px;
+    width: 100%;
+    background-color: blue;
+    align-items: center;
+   
+    
+}
+.flex-container11{
+    display: flex;
+    
+    height: 500px;
+    width: 100%;
+    background-color: blue;
+    align-content: stretch;  
+   
+    
+    
+}
+.flex-container12{
+    display: flex;
+    height: 500px;
+    width: 100%;
+    background-color: blue;
+    align-content: flex-start;
+    
+    
+}
+.flex-container13{
+    display: flex;
+   
+    height: 500px;
+    width: 100%;
+    background-color: blue;
+    align-content: flex-end;
+    
+    
+}
+.flex-container14{
+    display: flex;
+   
+    height: 500px;
+    width: 100%;
+    background-color: blue;
+    align-content: space-between; 
+}
+
+.flex-container15{
+    flex-wrap: wrap;
+    display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  background-color: aquamarine;   
+    
+}
+.flex-content-example {
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+    width: 100%;
+    margin: 20px auto;
+    background: #e0e0ff;
+    align-items: flex-start; 
+    gap: 10px;
+}
+.flex-content-example .box {
+    width: 120px;
+    height: 120px;
+    background: #fad707;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 10px;
+}

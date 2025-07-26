@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "gilroy", sans-serif;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    width: 100%;
+}
+
+#loader {
+    display: flex; /* Show loader */
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+    color: #fff;
+}
+
+#loader h1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4vw;
+    font-weight: 500;
+}
+
+#loader h1 span {
+    font-family: "mazius review";
+}
+
+/* Highlight for "Makhan" */
+.highlight {
+    color: #fad707;
+}
+
+.revel .parent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+.revel .parent .child {
+    display: block;
+}
+
+.parent .child span {
+    display: inline-block;
+}
+
+#yellow {
+    
+    width: 100%;
+    top: 100%;
+    position: absolute;
+    height: 100vh;
+    background-color: #fad707;
+}
+
+#home {
+    display: none; /* Hide the entire home section initially */
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+#home #nav {
+    width: 100%;
+    height: 100px;
+    justify-content: space-between;
+    padding: 0 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#home #nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 800;
+    color: black;
+    position: relative; /* Needed for ::after positioning */
+}
+
+#home #nav a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fad707;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: width 0.3s;
+}
+
+#home #nav a:hover {
+    color: black;
+}
+
+#home #nav a:hover::after {
+    width: 100%;
+}
+
+/* Product Section Title */
+.section-title {
+    font-size: 2rem;
+    color: #fad707;
+    margin: 40px 0 20px 0;
+    text-align: left;
+    font-weight: 700;
+    margin-left: 100px;
+}
+
+/* Section Wrapper */
+.product-section {
+    margin-bottom: 40px;
+
+}
+
+/* Cards Container */
+.product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw 2vw;           /* row and column gap */
+    justify-content: flex-start; /* or center for centered cards */
+    margin-bottom: 20px;
+    margin-left: 100px;
+}
+
+/* Individual Card */
+.card {
+    background: #fffbe7;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    text-align: center;
+    width: 220px;              /* Increased width */
+    padding: 32px 18px;        /* Added padding */
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img {
+    width: 160px;              /* Increased image size */
+    height: 160px;
+    object-fit: contain;
+    margin-bottom: 16px;
+}
+
+.card .brand {
+    font-size: 1.1rem;         /* Slightly larger font */
+    color: #888;
+    margin-bottom: 6px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.card h2 {
+    font-size: 1.4rem;         /* Larger product name */
+    margin: 10px 0 6px 0;
+    color: #333;
+}
+
+.card .price {
+    font-size: 1.2rem;         /* Larger price */
+    color: #fad707;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.card:hover {
+    transform: translateY(-12px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    background: #ffe066;
+}
+.card:hover .price {
+    color: #e63946; /* Example: a red shade, change as you like */
+    transition: color 0.2s;
+}
+
+.contact-section {
+    max-width: 400px;
+    margin: 60px auto;
+    background: #fffbe7;
+    padding: 32px 24px;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    text-align: center;
+}
+.contact-section h2 {
+    color: #fad707;
+    margin-bottom: 18px;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    margin-bottom: 14px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #fad707;
+    font-size: 1rem;
+    background: #fff;
+}
+.contact-form button {
+    background: #fad707;
+    color: #222;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.contact-form button:hover {
+    background: #ffe066;
+}
+
+@media (min-width: 1025px) {
+    .section-title,
+    .product-cards {
+        margin-left: 100px;
+    }
+    .product-cards {
+        gap: 2vw 2vw;
+        justify-content: flex-start;
+    }
+    .card {
+        width: 220px;
+        padding: 32px 18px;
+    }
+    .card img {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+    .section-title,
+    .product-cards {
+        margin-left: 4vw;
+    }
+    .product-cards {
+        gap: 3vw 3vw;
+        justify-content: center;
+    }
+    .card {
+        width: 180px;
+        padding: 24px 10px;
+    }
+    .card img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 700px) {
+    .section-title,
+    .product-cards {
+        margin-left: 2vw;
+    }
+    .product-cards {
+        gap: 4vw 4vw;
+        justify-content: center;
+    }
+    .card {
+        width: 90vw;
+        max-width: 320px;
+        padding: 18px 4vw;
+    }
+    .card img {
+        width: 90px;
+        height: 90px;
+    }
+    .section-title {
+        font-size: 1.3rem;
+        margin: 24px 0 12px 0;
+    }
+    #home #nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 2vw;
+        height: auto;
+    }
+    #home #nav a {
+        padding: 8px 0;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body, html {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    #home #nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 4vw;
+        height: auto;
+        min-height: 60px;
+        background: #fad707;
+    }
+    #home #nav a {
+        padding: 10px 0;
+        font-size: 1rem;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #ffe066;
+    }
+    .section-title {
+        font-size: 1.1rem;
+        margin: 18px 0 8px 0;
+        margin-left: 4vw;
+    }
+    .product-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100vw;
+    }
+    .card {
+        width: 94vw;
+        max-width: 98vw;
+        padding: 12px 2vw;
+        margin: 0 auto;
+    }
+    .card img {
+        width: 60px;
+        height: 60px;
+    }
+    .card h2 {
+        font-size: 1.1rem;
+    }
+    .card .brand {
+        font-size: 0.95rem;
+    }
+    .card .price {
+        font-size: 1rem;
+    }
+}
