@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Details</title>
+  <style>
+    /* i. Background Image covering full screen */
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('https://images.unsplash.com/photo-1542281286-9e0a16bb7366'); /* Replace with your image URL */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* h1 styling */
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #fff;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    /* Table styling */
+    table {
+      width: 80%;
+      margin: 40px auto;
+      border: 2px solid #333; /* iv. Border */
+      border-collapse: collapse; /* iv. Collapse borders */
+      background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    }
+    table:hover{
+        cursor: pointer;
+        
+
+    }
+
+    th, td {
+      padding: 15px;       /* i. Padding */
+      text-align: center;
+      font-size: 16px;      /* ii. Font size */
+      font-weight: 500;     /* ii. Font weight */
+    }
+
+    /* iii. Header styling */
+    th {
+      background-color: #1e88e5;
+      color: white;
+      text-transform: uppercase;        /* iii. Text transformation */
+      text-decoration: underline;       /* iii. Text decoration */
+      font-style: italic;               /* ii. Font style */
+    }
+
+    /* v. Rounded corners for td in even-numbered rows */
+    tr:nth-child(even) td {
+      border-radius: 10px;
+    }
+
+    /* vii. Alternating row colors */
+    tr:nth-child(even) {
+      background-color: #f0f8ff;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #ffffff;
+    }
+
+    /* viii. Hover effects */
+    tr:hover td {
+      font-style: italic;
+      text-decoration: underline;
+      background-color: #e3f2fd;
+    }
+
+    th:hover {
+      font-style: italic;
+      text-decoration: underline;
+      background-color: #1565c0;
+    }
+
+    /* Border for all cells */
+    th, td {
+      border: 1px solid #999;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Employee Details</h1>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Department</th>
+      <th>Salary</th>
+    </tr>
+    <tr>
+      <td>Rishi</td>
+      <td>21</td>
+      <td>Comps</td>
+      <td>2,500,000</td>
+    </tr>
+    <tr>
+      <td>Rishiraj</td>
+      <td>20</td>
+      <td>IT</td>
+      <td>2,500</td>
+    </tr>
+    <tr>
+      <td>Hari</td>
+      <td>200</td>
+      <td>Bhakti</td>
+      <td>2,500,000</td>
+    </tr>
+    <tr>
+      <td>Hariom</td>
+      <td>25</td>
+      <td>Food</td>
+      <td>2,500,000</td>
+    </tr>
+  </table>
+
+</body>
+</html>
