@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flexbox Demonstration</title>
+  <style>
+    .flex-container {
+      display: flex;
+      /* Toggle these for testing */
+      flex-direction: row;           /* row | row-reverse | column | column-reverse */
+      flex-wrap: wrap-reverse;             /* nowrap | wrap | wrap-reverse */
+      justify-content: space-evenly;       /* flex-start | flex-end | center | space-between | space-around */
+      align-items: center;           /* flex-start | flex-end | center | stretch | baseline */
+
+      height: 400px;
+      width: 100%;
+      border: 2px dashed #444;
+      margin: 20px auto;
+    }
+
+    .flex-container div {
+      color: white;
+      font-size: 18px;
+      padding: 20px;
+      margin: 5px;
+      flex-grow: 2;                 /* Try different values like 0, 1, 2 to see changes */
+      flex-shrink: 1;               /* Try 0 or 1 */
+      min-width: 100px;
+    }
+
+    .item1 { background-color: crimson; order: 3; }
+    .item2 { background-color: darkorange; order: 1; }
+    .item3 { background-color: seagreen; order: 5; }
+    .item4 { background-color: steelblue; order: 2; }
+    .item5 { background-color: purple; order: 4; }
+  </style>
+</head>
+<body>
+  <h2>Flexbox Property Demonstration</h2>
+  <div class="flex-container">
+    <div class="item1">Item 1</div>
+    <div class="item2">Item 2</div>
+    <div class="item3">Item 3</div>
+    <div class="item4">Item 4</div>
+    <div class="item5">Item 5</div>
+  </div>
+
+</body>
+</html>
