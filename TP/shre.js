@@ -17,6 +17,7 @@ form.addEventListener("submit",function(e){
     e.preventDefault();
 
     let valid = true;
+    
 
     if (!emailRegex.test(email.value.trim())) {
         emailm.textContent="enter valid email";
