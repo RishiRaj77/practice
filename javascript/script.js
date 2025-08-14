@@ -12,6 +12,7 @@ function addtocart(){
     }
 }
 
+
 const myCart = addtocart();
 myCart.addItem("Apple");
 myCart.addItem("Banana");
