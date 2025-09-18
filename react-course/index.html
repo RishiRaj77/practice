@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reactcourse</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- React and ReactDOM -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <!-- Babel for JSX -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    function ChatInput() {
+      return (
+        <>
+          <input placeholder="hello type karo" size="30" />
+          <button>Send</button>
+        </>
+      );
+    }
+
+    function ChatMessage() {
+      return (
+        <div>
+          <p>hello chatbot</p>
+          <img src="user.png" alt="user" width="50" />
+        </div>
+      );
+    }
+
+    const App = (
+      <>
+        <ChatInput />
+        <ChatMessage message="hello chatbot"/>
+      </>
+    );
+
+    const container = document.querySelector('#root');
+    ReactDOM.createRoot(container).render(App);
+  </script>
+</body>
+</html>
